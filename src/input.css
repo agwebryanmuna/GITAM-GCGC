@@ -12,8 +12,8 @@
   /* colors */
   --color-white: #ffffff;
   --color-ash-1: #eff0f1;
-  --color-ash-2: #d2d2d2;
-  --color-ash-3: #8391a0;
+  --color-ash-2: #f2f2f2;
+  --color-ash-3: #d3d3d3;
   --color-ash-4: #333333;
   --color-ash-4-opacity: #33333380;
   --color-coral-1: #e8c5b0;
@@ -24,7 +24,7 @@
 }
 
 body {
-  @apply font-commissioner font-normal text-1xl;
+  @apply font-commissioner font-normal text-1xl px-5 sm:px-0;
 }
 
 @layer components {
@@ -39,6 +39,10 @@ body {
   }
 
   .common_text {
-    @apply font-commissioner font-medium text-ash-4-opacity leading-8;
+    @apply font-commissioner font-normal text-ash-4-opacity leading-8;
+  }
+
+  .btn {
+    @apply px-6 text-nowrap py-3 border border-darkGreen text-darkGreen rounded-sm uppercase font-bold text-[0.875rem] hover:bg-darkGreen hover:text-white ease-in duration-150;
   }
 }

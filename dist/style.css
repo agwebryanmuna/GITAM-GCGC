@@ -10,12 +10,15 @@
       "Courier New", monospace;
     --color-white: #ffffff;
     --spacing: 0.25rem;
+    --container-2xl: 42rem;
+    --container-3xl: 48rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
     --font-weight-normal: 400;
-    --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-sm: 0.25rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
@@ -24,8 +27,11 @@
     --font-commissioner: "Commissioner", sans-serif;
     --text-1xl: 1rem;
     --color-ash-1: #eff0f1;
+    --color-ash-2: #f2f2f2;
+    --color-ash-3: #d3d3d3;
     --color-ash-4: #333333;
     --color-ash-4-opacity: #33333380;
+    --color-coral-2: #ffc8a7;
     --color-darkGreen: #1d4645;
   }
 }
@@ -220,6 +226,15 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-7 {
+    margin-top: calc(var(--spacing) * 7);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-44 {
+    margin-top: calc(var(--spacing) * 44);
+  }
   .ml-auto {
     margin-left: auto;
   }
@@ -235,8 +250,18 @@
   .h-14 {
     height: calc(var(--spacing) * 14);
   }
+  .w-2xl {
+    width: var(--container-2xl);
+  }
   .w-full {
     width: 100%;
+  }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .-translate-y-20 {
+    --tw-translate-y: calc(var(--spacing) * -20);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -250,6 +275,9 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
@@ -260,14 +288,27 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-ash-4 {
-    border-color: var(--color-ash-4);
+  .border-l {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 1px;
+  }
+  .border-ash-3 {
+    border-color: var(--color-ash-3);
+  }
+  .border-coral-2 {
+    border-color: var(--color-coral-2);
+  }
+  .bg-ash-2 {
+    background-color: var(--color-ash-2);
+  }
+  .bg-coral-2 {
+    background-color: var(--color-coral-2);
   }
   .bg-darkGreen {
     background-color: var(--color-darkGreen);
   }
-  .px-3 {
-    padding-inline: calc(var(--spacing) * 3);
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -284,6 +325,12 @@
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
   }
+  .pr-4 {
+    padding-right: calc(var(--spacing) * 4);
+  }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
+  }
   .text-center {
     text-align: center;
   }
@@ -291,16 +338,17 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
-  .text-\[0\.875rem\] {
-    font-size: 0.875rem;
-  }
-  .font-medium {
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .text-ash-1 {
     color: var(--color-ash-1);
@@ -308,27 +356,22 @@
   .text-ash-4 {
     color: var(--color-ash-4);
   }
-  .uppercase {
-    text-transform: uppercase;
+  .text-ash-4-opacity {
+    color: var(--color-ash-4-opacity);
+  }
+  .text-darkGreen {
+    color: var(--color-darkGreen);
+  }
+  .capitalize {
+    text-transform: capitalize;
   }
   .duration-100 {
     --tw-duration: 100ms;
     transition-duration: 100ms;
   }
-  .duration-200 {
-    --tw-duration: 200ms;
-    transition-duration: 200ms;
-  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
-  }
-  .hover\:bg-ash-4 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-ash-4);
-      }
-    }
   }
   .hover\:bg-white {
     &:hover {
@@ -344,11 +387,10 @@
       }
     }
   }
-  .hover\:text-white {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-white);
-      }
+  .focus\:outline-0 {
+    &:focus {
+      outline-style: var(--tw-outline-style);
+      outline-width: 0px;
     }
   }
   .sm\:static {
@@ -384,11 +426,6 @@
   .sm\:bg-transparent {
     @media (width >= 40rem) {
       background-color: transparent;
-    }
-  }
-  .sm\:px-6 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 6);
     }
   }
   .sm\:py-0 {
@@ -429,17 +466,51 @@
       }
     }
   }
-  .md\:py-3 {
-    @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 3);
+  .lg\:mx-0 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
+    }
+  }
+  .lg\:w-\[38\%\] {
+    @media (width >= 64rem) {
+      width: 38%;
+    }
+  }
+  .lg\:flex-row {
+    @media (width >= 64rem) {
+      flex-direction: row;
+    }
+  }
+  .lg\:justify-center {
+    @media (width >= 64rem) {
+      justify-content: center;
+    }
+  }
+  .lg\:justify-start {
+    @media (width >= 64rem) {
+      justify-content: flex-start;
+    }
+  }
+  .lg\:text-left {
+    @media (width >= 64rem) {
+      text-align: left;
     }
   }
 }
 body {
+  padding-inline: calc(var(--spacing) * 5);
   font-family: var(--font-commissioner);
   font-size: var(--text-1xl);
   --tw-font-weight: var(--font-weight-normal);
   font-weight: var(--font-weight-normal);
+  @media (width >= 40rem) {
+    padding-inline: calc(var(--spacing) * 0);
+  }
 }
 @layer components {
   h2 {
@@ -470,10 +541,53 @@ body {
     font-family: var(--font-commissioner);
     --tw-leading: calc(var(--spacing) * 8);
     line-height: calc(var(--spacing) * 8);
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
     color: var(--color-ash-4-opacity);
   }
+  .btn {
+    border-radius: var(--radius-sm);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-darkGreen);
+    padding-inline: calc(var(--spacing) * 6);
+    padding-block: calc(var(--spacing) * 3);
+    font-size: 0.875rem;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    text-wrap: nowrap;
+    color: var(--color-darkGreen);
+    text-transform: uppercase;
+    --tw-duration: 150ms;
+    transition-duration: 150ms;
+    --tw-ease: var(--ease-in);
+    transition-timing-function: var(--ease-in);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-darkGreen);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -492,6 +606,11 @@ body {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -499,10 +618,14 @@ body {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-duration: initial;
       --tw-ease: initial;
+      --tw-outline-style: solid;
       --tw-leading: initial;
     }
   }
