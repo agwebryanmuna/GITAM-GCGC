@@ -1,0 +1,23 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* fonts */
+  --font-commissioner: "Commissioner", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+
+  /* colors */
+  --color-white: #ffffff;
+  --color-ash-1: #eff0f1;
+  --color-ash-2: #d3d6da;
+  --color-ash-3: #8391a0;
+  --color-ash-4: #333333;
+  --color-ash-4-opacity: #33333380;
+  --color-coral-1: #e8c5b0;
+  --color-coral-2: #ffc8a7;
+  --color-coral-3: #f9a983;
+  --color-darkGreen: #1d4645;
+  --color-lightBlue: #12e1ff;
+}
