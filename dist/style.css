@@ -11,6 +11,7 @@
     --text-5xl--line-height: 1;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-darkGreen: #1d4645;
   }
 }
 @layer base {
@@ -159,6 +160,9 @@
   }
 }
 @layer utilities {
+  .bg-darkGreen {
+    background-color: var(--color-darkGreen);
+  }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
