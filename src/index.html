@@ -4,10 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/style.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Gitam | GCGC</title>
   </head>
   <body>
-    <!-- ... -->
-    <h1 class="text-5xl">Hello World</h1>
+    <!--~~~~~~~~~~~~~~~~~ Navigation ~~~~~~~~~~~~~~~~~~~~~-->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 sm:py-3">
+      <div
+        class="container mx-auto relative h-14 flex justify-between items-center px-5"
+      >
+        <!-- logo -->
+        <a href="#" class="pt-3 sm:pt-0">
+          <img src="./images/gitam_logo.png" alt="logo" />
+        </a>
+
+        <!-- menu items -->
+        <nav
+          id="navbar"
+          class="hidden absolute top-0 left-0 w-full py-14 bg-darkGreen text-ash-1 sm:block sm:static sm:py-0 sm:w-auto sm:bg-transparent sm:text-inherit"
+        >
+          <ul class="flex flex-col text-center gap-5 sm:flex-row sm:gap-6">
+            <li>
+              <a
+                href="#"
+                class="nav_link py-2 px-4 hover:bg-white hover:text-darkGreen rounded-sm ease-in duration-100 sm:hover:bg-darkGreen sm:hover:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="nav_link py-2 px-4 hover:bg-white hover:text-darkGreen rounded-sm ease-in duration-100 sm:hover:bg-darkGreen sm:hover:text-white"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="nav_link py-2 px-4 hover:bg-white hover:text-darkGreen rounded-sm ease-in duration-100 sm:hover:bg-darkGreen sm:hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="nav_link py-2 px-4 hover:bg-white hover:text-darkGreen rounded-sm ease-in duration-100 sm:hover:bg-darkGreen sm:hover:text-white"
+                >Blog</a
+              >
+            </li>
+          </ul>
+
+          <!-- Close menu -->
+          <div
+            id="close-btn"
+            class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer sm:hidden"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </nav>
+
+        <!-- contact button -->
+        <div class="flex items-center gap-5">
+          <a
+            href="#"
+            class="ml-auto inline-block border border-ash-4 rounded-sm font-medium text-[0.875rem] uppercase text-ash-4 py-2 px-3 bge-linear hover:bg-ash-4 hover:text-white duration-200 sm:px-6 md:py-3"
+            >Contact</a
+          >
+          <div id="menu-icon" class="sm:hidden">
+            <i class="fa-solid fa-bars cursor-pointer text-xl"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- JS -->
+    <script src="main.js"></script>
   </body>
 </html>

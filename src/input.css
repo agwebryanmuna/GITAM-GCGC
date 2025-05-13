@@ -7,11 +7,12 @@
   /* fonts */
   --font-commissioner: "Commissioner", sans-serif;
   --font-rubik: "Rubik", sans-serif;
+  --text-1xl: 1rem;
 
   /* colors */
   --color-white: #ffffff;
   --color-ash-1: #eff0f1;
-  --color-ash-2: #d3d6da;
+  --color-ash-2: #d2d2d2;
   --color-ash-3: #8391a0;
   --color-ash-4: #333333;
   --color-ash-4-opacity: #33333380;
@@ -20,4 +21,24 @@
   --color-coral-3: #f9a983;
   --color-darkGreen: #1d4645;
   --color-lightBlue: #12e1ff;
+}
+
+body {
+  @apply font-commissioner font-normal text-1xl;
+}
+
+@layer components {
+  h2 {
+    @apply font-bold leading-16 text-darkGreen text-[4.125rem];
+  }
+  h3 {
+    @apply font-bold leading-12 text-[2.5rem];
+  }
+  h4 {
+    @apply font-bold leading-6 text-darkGreen text-2xl;
+  }
+
+  .common_text {
+    @apply font-commissioner font-medium text-ash-4-opacity leading-8;
+  }
 }
