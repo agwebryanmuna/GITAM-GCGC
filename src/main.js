@@ -7,6 +7,16 @@ const showStepsBtn = document.getElementById("show-steps");
 const showLessBtn = document.getElementById("show-less");
 const hiddenSteps = document.getElementById("hidden-steps");
 
+const mainHeader = document.getElementById("main-header");
+
+window.addEventListener("scroll", () => {
+  const headerHeight = mainHeader.getBoundingClientRect().height;
+  const windowScrollLevel = window.pageYOffset;
+  windowScrollLevel > headerHeight
+    ? mainHeader.classList.add("shadow-md")
+    : mainHeader.classList.remove("shadow-md");
+});
+
 closeBtn.addEventListener("click", () => {
   navbar.classList.add("hidden");
 });
