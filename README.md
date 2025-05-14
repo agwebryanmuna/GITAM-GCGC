@@ -4,7 +4,7 @@ A static webpage built with HTML, CSS and Tailwind.
 
 ## Demo
 
-You can view the live version of the website here: [Live Demo](https://agwebryanmuna.github.io/GITAM-GCGC)
+You can view the live version of the website here: [Live Demo](https://agwebryanmuna.github.io/GITAM-GCGC/)
 
 ## Features
 
