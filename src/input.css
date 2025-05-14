@@ -24,12 +24,12 @@
 }
 
 body {
-  @apply font-commissioner font-normal text-1xl px-5 sm:px-0;
+  @apply font-commissioner font-normal text-1xl;
 }
 
 @layer components {
   h2 {
-    @apply font-bold leading-16 text-darkGreen text-[4.125rem];
+    @apply font-bold leading-16 text-darkGreen text-6xl;
   }
   h3 {
     @apply font-bold leading-12 text-[2.5rem];
@@ -44,5 +44,9 @@ body {
 
   .btn {
     @apply px-6 text-nowrap py-3 border border-darkGreen text-darkGreen rounded-sm uppercase font-bold text-[0.875rem] hover:bg-darkGreen hover:text-white ease-in duration-150;
+  }
+
+  .card {
+    @apply w-96 p-5 overflow-hidden rounded-lg shadow-md bg-white border border-coral-3;
   }
 }

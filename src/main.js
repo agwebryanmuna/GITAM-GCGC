@@ -3,6 +3,10 @@ const closeBtn = document.getElementById("close-btn");
 const menuIcon = document.getElementById("menu-icon");
 const navLinks = document.querySelectorAll(".nav_link");
 
+const showStepsBtn = document.getElementById("show-steps");
+const showLessBtn = document.getElementById("show-less");
+const hiddenSteps = document.getElementById("hidden-steps");
+
 closeBtn.addEventListener("click", () => {
   navbar.classList.add("hidden");
 });
@@ -15,4 +19,16 @@ navLinks.forEach((item) => {
   item.addEventListener("click", () => {
     navbar.classList.add("hidden");
   });
+});
+
+showStepsBtn.addEventListener("click", () => {
+  hiddenSteps.classList.remove("hidden");
+  showStepsBtn.classList.add("hidden");
+  showLessBtn.classList.remove("hidden");
+});
+
+showLessBtn.addEventListener("click", () => {
+  hiddenSteps.classList.add("hidden");
+  showStepsBtn.classList.remove("hidden");
+  showLessBtn.classList.add("hidden");
 });
